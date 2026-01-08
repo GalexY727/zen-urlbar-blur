@@ -1,0 +1,15 @@
+#browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels {
+    pointer-events: none;
+    filter: blur(3px) brightness(80%) !important;
+}
+
+#urlbar[open][zen-floating-urlbar="true"] .urlbar-background {
+    background-color: color-mix(in srgb, var(--zen-urlbar-background-base) 60%, transparent) !important;
+    border-radius: 1em !important;
+}
+
+#browser:not(:has(.zen-glance-background)) #tabbrowser-tabpanels {
+    transition: all 0.15s
+        cubic-bezier(0.175, 0.885, 0.32, 1.35),
+      filter 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+}
